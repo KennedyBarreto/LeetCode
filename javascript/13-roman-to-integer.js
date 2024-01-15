@@ -1,4 +1,8 @@
-function romanToInt(s) {
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var romanToInt = function (s) {
   let soma = 0;
   for (let i = 0; i < s.length; i++) {
     switch (s[i]) {
@@ -64,7 +68,7 @@ function romanToInt(s) {
     }
   }
   return soma;
-}
+};
 
 let s = "XVII";
 romanToInt(s);

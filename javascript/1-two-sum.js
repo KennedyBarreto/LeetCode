@@ -1,9 +1,16 @@
-const numIndices = {};
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function (nums, target) {
+  const numIndices = {};
 
-for (let i = 0; i < nums.length; i++) {
-  const complement = target - nums[i];
-  if (numIndices.hasOwnProperty(complement)) {
-    return [numIndices[complement], i];
+  for (let i = 0; i < nums.length; i++) {
+    const complement = target - nums[i];
+    if (numIndices.hasOwnProperty(complement)) {
+      return [numIndices[complement], i];
+    }
+    numIndices[nums[i]] = i;
   }
-  numIndices[nums[i]] = i;
-}
+};
